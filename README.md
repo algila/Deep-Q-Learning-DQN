@@ -10,7 +10,7 @@ first layer: 32conv2D with kernel 8x8 stride=4 and initialization keras.initiali
 second layer: 64conv2D with kernel 4x4 stride=2 and initialization keras.initializers.VarianceScaling(scale=2.0) , RELU , Dropout 20%\
 third layer: 64conv2D with kernel 3x3 stride=1 and initialization keras.initializers.VarianceScaling(scale=2.0) , RELU , Dropout 20%\
 final hidden layer is fully-connected and consists of 512 rectifier units\
-The output layer is a fully-connected linear layer with a single output for each valid action. In the case of Breakout =4\ 
+The output layer is a fully-connected linear layer with a single output for each valid action. In the case of Breakout =4 
 
 
 * **ReplayMemory**\
