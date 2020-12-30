@@ -1,6 +1,7 @@
 # Deep Q Learning (DQN)
 Python implementation of Deepminds DQN derived from the paper Mnih et al., 2013 arXiv:1312.5602v1 Playing Atari game Breakout in gym environment running on tensorflow version 2.3.1 and keras version 2.4.0. The code is my free interpretation of the mentioned paper based on my understanding and available information also supported by some available material in GitHub I referred in the below code description. The intention of this code is just to study the DQN approach in the library I'm more familiar to use. A big thanks to all the contributors I referred below. In case I miss some one else please advice I'll integrate and sorry for that.
 
+![ScreenShot](https://github.com/algila/Deep-Q-Learning-DQN/edit/main/pictures/Breakout.png)
 
 * **Input pre-processing**\
 images from gym environment (210x160x3) are converted in gray color, then crop off upper score (31 lines) and below black area (15 lines). finaly resize  at 84x84
