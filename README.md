@@ -27,7 +27,7 @@ used Adam as optimizer
 followed the paper and after 1M of fames decay manteined as suggested in above mentioned link of fg91.
 
 * **Parameters**\
-all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning"\
+all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning"
 
 The code is running and a progress in the reward is visible. Due to the limited computetional power in my PC I'm not able to run it till a good final score. I left some portion of the code I used for Deguging in case should be usefull to some one. Inside the for episode I concentrate the call to all the key function of the algorithm as reported in the original paper and as listed in https://towardsdatascience.com/tutorial-double-deep-q-learning-with-dueling-network-architectures-4c1b3fb7f756
 
