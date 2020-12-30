@@ -1,7 +1,7 @@
 # Deep Q Learning (DQN)
 Python implementation of Deepminds DQN derived from the paper Mnih et al., 2013 arXiv:1312.5602v1 Playing Atari game Breakout in gym environment running on tensorflow version 2.3.1 and keras version 2.4.0. The code is my free interpretation of the mentioned paper based on my understanding and available information also supported by some available material in GitHub I referred in the below code description. The intention of this code is just to study the DQN approach in the library I'm more familiar to use. A big thanks to all the contributors I referred below. In case I miss some one else please advice I'll integrate and sorry for that.
 
-![ScreenShot](https://github.com/algila/Deep-Q-Learning-DQN/edit/main/pictures/Breakout.png)
+![](pictures/Breakout.png)
 
 * **Input pre-processing**\
 images from gym environment (210x160x3) are converted in gray color, then crop off upper score (31 lines) and below black area (15 lines). finaly resize  at 84x84
@@ -31,5 +31,8 @@ followed the paper and after 1M of fames decay manteined as suggested in above m
 all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning"
 
 The code is running and a progress in the reward is visible. Due to the limited computetional power in my PC I'm not able to run it till a good final score. I left some portion of the code I used for Deguging in case should be usefull to some one. Inside the for episode I concentrate the call to all the key function of the algorithm as reported in the original paper and as listed in https://towardsdatascience.com/tutorial-double-deep-q-learning-with-dueling-network-architectures-4c1b3fb7f756
+
+
+![](pictures/DQN_paper_algo.png)
 
 Personally I do believe that there is still a very long road befor to create an algorithm with the efficiency of the human brain having that the training in the paper was executed on a total of 38 days of game experience. For this reason as far as I can see also if the performance are better then human it is still a big limitation to move forward on more complicated tasks to apply the "General AI". For this reason I will not use my time to study the evolution of this approach published by Deepmind, but I prefer to look forward on a different approach. My inspiration is to move far from the Bellman equation.
