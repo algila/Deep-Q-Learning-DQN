@@ -1,5 +1,6 @@
 # Deep Q Learning (DQN)
-Python implementation of Deepminds DQN derived from the paper Mnih et al., 2013 arXiv:1312.5602v1 Playing Atari game Breakout in gym environment running on tensorflow version 2.3.1 and keras version 2.4.0. The code is my free interpretation of the mentioned paper based on my understanding and available information.
+Python implementation of Deepminds DQN derived from the paper Mnih et al., 2013 arXiv:1312.5602v1 Playing Atari game Breakout in gym environment running on tensorflow version 2.3.1 and keras version 2.4.0. The code is my free interpretation of the mentioned paper based on my understanding and available information also supported by some available material in GitHub I referred in the below code description. The intention of this code is just to study the DQN approach in the library I'm more familiar to use. A big thanks to all the contributors I referred below. In case I miss some one else please advice Ill integrate and sorry for that.
+
 
 * **Input pre-processing**\
 images from gym environment (210x160x3) are converted in gray color, then crop off upper score (31 lines) and below black area (15 lines). finaly resize  at 84x84
@@ -14,6 +15,7 @@ The output layer is a fully-connected linear layer with a single output for each
 
 * **ReplayMemory**\
 function derived from https://github.com/fg91/Deep-Q-Learning/blob/master/DQN.ipynb
+Having this need to store the last size=1,000,000 transitions it is created to save memory space so containing only action, reward , future fame (84x84) and terminator flag.
 
 * **Minibatch**\
 Each state contain 4 consecutive immages from the environment (84x84x4), the action , the reward obtained doing the action, and the new state(84x84x4)
