@@ -16,16 +16,16 @@ The output layer is a fully-connected linear layer with a single output for each
 
 * **ReplayMemory**\
 function derived from https://github.com/fg91/Deep-Q-Learning/blob/master/DQN.ipynb
-Having this need to store the last size=1,000,000 transitions it is created to save memory space so containing only action, reward , future fame (84x84) and terminator flag.
+Having this need to store the last number of transitions: size=1,000,000  It is created to save memory space containing only action, reward , future fame (84x84) and terminator flag.
 
 * **Minibatch**\
-Each state contain 4 consecutive immages from the environment (84x84x4), the action , the reward obtained doing the action, and the new state(84x84x4)
+Each state contain 4 consecutive immages from the environment (84x84x4), the action , the reward obtained doing the action, the new state(84x84x4) and finally the terminator flag reporting if the frame is related to the end game or not. 
 
 * **Training**\
-used Adam as optimizer
+used Adam as optimizer with a fixed learning rate
 
 * **Epsilon decay**\
-followed the paper and after 1M of fames decay manteined as suggested in above mentioned link of fg91.
+followed the paper and after 1M of fames the decay is manteined as suggested in above mentioned link of fg91.
 
 * **Parameters**\
 all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning"
