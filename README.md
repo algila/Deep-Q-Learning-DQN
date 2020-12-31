@@ -4,7 +4,7 @@ Python implementation of Deepminds DQN derived from the paper Mnih et al., 2013 
 ![](pictures/Breakout.png)
 
 * **Input pre-processing**\
-images from gym environment (210x160x3) are converted in gray color, then crop off upper score (31 lines) and below black area (15 lines). finaly resize  at 84x84 using resample=Image.BILINEAR as in the paper. The dtype=np.uint8 is used to use less memory when it is stored in the ReplayMemory. When those frames are provided in input to the model are dividied by 255 to keep the range from 0 to 1 "Normalization approach". I did not found if this was used in the paper or not. Should be an idea to apply "Standardization approach" to compare performance. I did on som thousand of frames but I have not seen an improvement 
+images from gym environment (210x160x3) are converted in gray color, then crop off upper score (31 lines) and below black area (15 lines). finaly resize  at 84x84 using resample=Image.BILINEAR as in the paper. The dtype=np.uint8 is used to use less memory when it is stored in the ReplayMemory. When those frames are provided in input to the model are dividied by 255 to keep the range from 0 to 1 "Normalization approach". I did not found if this was used in the paper or not. Should be an idea to apply "Standardization approach" to keep the agerage of the distribution centered in the RELU non linearity to compare performance. I did on some thousand of frames but I have not seen an improvement 
 
 * **Model**\
 first layer: 32conv2D with kernel 8x8 stride=4 and initialization keras.initializers.VarianceScaling(scale=2.0) , RELU , Dropout 40%\
