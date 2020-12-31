@@ -25,12 +25,12 @@ Each state contain 4 consecutive immages from the environment (84x84x4), the act
 used Adam as optimizer with a fixed learning rate
 
 * **Epsilon decay**\
-followed the paper and after 1M of fames the decay is manteined as suggested in above mentioned link of fg91.
+followed the paper and after 1M of fames the decay is manteined as suggested in above mentioned link of fg91. I consider this a valuable approach so I mantenined in this implementation
 
 * **Parameters**\
-all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning"
+all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning". Only learning rate is used based on paper released in 2015 by Mnih et all using LR=0.00025
 
-The code is running and a progress in the reward is visible. Due to the limited computetional power in my PC I'm not able to run it till a good final score. I left some portion of the code I used for Deguging in case should be usefull to some one. Inside the ```for episode``` I concentrate the call to all the key function of the algorithm as reported in the original paper and as listed in https://towardsdatascience.com/tutorial-double-deep-q-learning-with-dueling-network-architectures-4c1b3fb7f756
+The code is running and a progress in the reward is visible. I'm not using TensorBoard but I left the class used in above mentioned link of fg91 to keep more speed in the computation. Due to the limited computetional power in my PC I'm not able to run it till a good final score. I left some portion of the code I used for Deguging in case should be usefull to some one. Inside the ```for episode``` I concentrate the call to all the key function of the algorithm as reported in the original paper and as listed in https://towardsdatascience.com/tutorial-double-deep-q-learning-with-dueling-network-architectures-4c1b3fb7f756
 
 
 ![](pictures/DQN_paper_algo.png)
