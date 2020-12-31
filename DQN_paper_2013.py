@@ -347,8 +347,8 @@ def pre_processing (frame):
     #plt.imshow(np.array(np.squeeze(frame_gray)), cmap='gray')
     #plt.show()
     frame_gray = frame_gray[31:195, 0:160]  # crop off upper score (31 lines) and below black area (15 lines)
-    #resized_img0 = Image.fromarray(frame_gray).resize(size=(84, 84), resample=Image.BILINEAR)  # 84x84x1
-    resized_img0 = Image.fromarray(frame_gray).resize(size=(84, 84), resample=Image.NEAREST)  # 84x84x1
+    resized_img0 = Image.fromarray(frame_gray).resize(size=(84, 84), resample=Image.BILINEAR)  # 84x84x1
+    #resized_img0 = Image.fromarray(frame_gray).resize(size=(84, 84), resample=Image.NEAREST)  # 84x84x1
     #plt.imshow(np.array(np.squeeze(resized_img0)), cmap='gray')
     #plt.show()
     return asarray(resized_img0, dtype=np.uint8)
