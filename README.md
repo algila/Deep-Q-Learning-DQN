@@ -25,7 +25,7 @@ Each state contain 4 consecutive immages from the environment (84x84x4), the act
 used Adam as optimizer with a fixed learning rate
 
 * **Epsilon decay**\
-followed the paper and after 1M of fames the decay is manteined as suggested in above mentioned link of fg91. I consider this a valuable approach so I mantenined in this implementation
+followed the paper and after 1M fames the decay is manteined as suggested in above mentioned link of fg91. I consider this a valuable approach so I mantenined in this implementation
 
 * **Parameters**\
 all parameter are derived from Tab 1 of the paper "Human-level control through deep reinforcement learning". Only learning rate is used based on paper released in 2015 by Mnih et all using LR=0.00025
